@@ -1,0 +1,62 @@
+// block
+@mixin block () {
+	display: block;
+}
+
+// font
+@mixin font ($size: null, $height: null, $weight: null) {
+    font-size  : $size;
+    line-height: $height;
+    font-weight: $weight;
+}
+
+// button
+@mixin button ($bgColor: transparent, $textColor: $color-primary) {
+	margin    : 0;
+	padding   : 0;
+	border    : 0;
+	outline   : 0;
+	cursor    : pointer;
+	color     : $textColor;
+	background: $bgColor;
+	transition: all linear .25s;
+
+	&:hover,
+	&:active,
+	&:focus,
+	&:visited {
+		color     : $textColor;
+		background: $bgColor;
+	}
+}
+
+// keyframe
+@mixin keyframe ($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+// flex
+@mixin flex () {
+    width     : 100%;
+    min-height: 100%;
+
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}

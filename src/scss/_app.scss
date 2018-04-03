@@ -1,0 +1,10 @@
+/* App Styles
+-------------------------------------------------------------------------- */
+$app: ".app";
+
+#{$app} {
+	&__content {
+		color     : $color-white;
+		background: linear-gradient(90deg, $color-black 0%, $color-black-grey 50%, $color-black 100%);
+	}
+}

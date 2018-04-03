@@ -1,0 +1,71 @@
+/* Form Styles
+-------------------------------------------------------------------------- */
+$form: ".form";
+
+#{$form} {
+	input[type="search"]::-webkit-search-decoration,
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-results-button,
+	input[type="search"]::-webkit-search-results-decoration {
+		display: none;
+	}
+	
+	&__control {
+		display: block;
+		margin : 0 auto;
+		width  : 320px;
+		height : 60px;
+
+		color     : $color-white;
+		background: transparent;
+
+		padding: 0 20px;
+
+		border : 0;
+		outline: none;
+
+		border-bottom: 2px solid $color-black-grey;
+
+		text-align: center;
+
+		@include font (20px, 58px);
+
+		&:focus {
+			border-bottom-color: $color-dark-grey;
+		}
+
+		&-container {
+			position: relative;
+			margin  : 0 auto;
+			width   : 320px;
+
+			&__btn {
+				position: absolute;
+				top     : 0;
+				right   : 0;
+				bottom  : 0;
+				padding : 0 0 4px;
+
+				width : 58px;
+				height: 58px;
+
+				cursor : pointer;
+				border : 0;
+				outline: none;
+
+				color     : $color-white;
+				background: transparent;
+
+				transition: background linear .15s;
+
+				@include font (30px);
+
+				&:focus,
+				&:active,
+				&:hover {
+					background: rgba($color-black, .25);
+				}
+			}
+		}
+	}
+}

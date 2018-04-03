@@ -1,0 +1,24 @@
+/* Text Utils
+-------------------------------------------------------------------------- */
+$text: ".text";
+
+#{$text} {
+	// Alignment
+	&-center {
+		text-align: center;
+	}
+	&-right {
+		text-align: right;
+	}
+	&-left {
+		text-align: left;
+	}
+
+	// Cases
+	&-uppercase {
+		text-transform: uppercase;
+	}
+	&-lowercase {
+		text-transform: lowercase;
+	}
+}

@@ -1,0 +1,42 @@
+
+// devices
+$phone-width      : 475px;
+$tablet-width     : 768px;
+$desktop-width    : 1024px;
+$bigDesktop-width : 1400px;
+$hugeDesktop-width: 1680px;
+
+// container
+$container-xs: 500px;
+$container-sm: 680px;
+$container-md: 1020px;
+$container-lg: 1280px;
+
+$container-xs-padding: 15px;
+$container-sm-padding: 15px;
+$container-md-padding: 20px;
+$container-lg-padding: 40px;
+
+// fonts
+$weight-xs: 300;
+
+$weight-sm: 400;
+$font-sm  : 12px;
+$line-sm  : 20px;
+
+$weight-md: 500;
+$font-md  : 16px;
+$line-md  : 20px;
+
+$weight-lg: 900;
+$font-lg  : 24px;
+$line-lg  : 30px;
+
+// border radius
+$radius-xs: 4px;
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+
+// margin sizes
+$margin-sizes: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45);

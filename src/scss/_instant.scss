@@ -1,0 +1,205 @@
+/* Instant Styles
+-------------------------------------------------------------------------- */
+$instant: ".instant";
+
+#{$instant} {
+	position: relative;
+	display : inline-block;
+	margin  : 20px;
+	padding : 0;
+
+	width : 210px;
+	min-height: 160px;
+
+	vertical-align: top;
+
+	&__shortcut {
+		margin    : 10px 0 0;
+		min-heigth: 40px;
+
+		&__label,
+		&__input {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&__label  {
+			@include font (10px, 40px);
+		}
+
+		&__input {
+			@include font (20px, 30px);
+
+			margin : 0 0 0 5px;
+			padding: 0 0 3px;
+			width  : 40px;
+			height : 30px;
+			border : 0;
+
+			color     : $color-white;
+			background: rgba($color-black, .25);
+			box-shadow: inset 0 0 5px rgba($color-black, .5);
+
+			border-radius: 4px;
+
+			text-align: center;
+		}
+	}
+
+	&__actions,
+	&__btn,
+	&__vol {
+		position: relative;
+		display : inline-block;
+		height  : 110px;
+
+		vertical-align: middle;
+	}
+
+	&__actions,
+	&__vol {
+		position: relative;
+		width   : 40px;
+	    margin  : 0;
+	}
+
+	&__actions {
+		padding: 0 0 0 5px;
+
+		&__btn {
+			width  : 100%;
+			height : 35px;
+			margin : 0;
+			padding: 0;
+
+			border : 0;
+			outline: 0;
+
+			cursor: pointer;
+
+			color        : $color-white;
+			background   : transparent;
+			border-radius: 4px;
+
+			transition: all linear .15s;
+
+			&.active,
+			&:active,
+			&:focus,
+			&:hover {
+				background: rgba($color-white, .1);
+
+				&:disabled {
+					background: transparent;
+				}
+			}
+		}
+	}
+
+	&__btn,
+	&__vol,
+	&__actions__btn,
+	&__shortcut__input {
+		&:disabled {
+			opacity: 0.5;
+			cursor : not-allowed;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		width   : 120px;
+		padding : 20px 5px;
+		margin  : 0 5px;
+		cursor  : pointer;
+
+		outline      : 0;
+		border-radius: 4px;
+
+		text-transform: uppercase;
+
+		color     : $color-white;
+		background: lighten($color-black, 20%);
+		border    : 2px solid rgba($color-white, .05);
+		box-shadow: 0 0 10px 2px transparent;
+
+		transition: all linear .15s;
+
+		@include font(13px, 15px);
+
+		&:active,
+		&:focus,
+		&:hover {
+			outline: 0;
+		}
+
+		&__title {
+			word-break: break-word;
+			overflow  : hidden;
+			max-height: 45px;
+		}
+
+		&.playing {
+			opacity   : 1;
+			border-color: darken($color-red, 10%);
+			box-shadow  : 0 0 8px -2px darken($color-red, 10%);
+		}
+
+		&__status,
+		&__duration {
+			position: absolute;
+			right   : 5px;
+			left    : 5px;
+
+			color: lighten($color-black, 35%);
+
+			text-transform: lowercase;
+		}
+
+		&__status {
+			top: 5px;
+			text-transform: capitalize;
+		}
+
+		&__duration {
+			bottom: 10px;
+		}
+	}
+
+	&__vol {
+	    -webkit-appearance: slider-vertical; /* WebKit */
+	    writing-mode      : bt-lr; /* IE */
+
+	    padding: 20px 10px 0;
+
+	    &:before {
+	    	position: absolute;
+	    	display : block;
+	    	top     : -1px;
+	    	right   : 4px;
+	    	left    : 4px;
+	    	content : "VOL";
+
+	    	padding : 5px 0;
+
+	    	text-align: center;
+
+	    	background   : $color-black-grey;
+	    	border-radius: 4px;
+	    }
+	}
+
+	&__progress {
+		position: absolute;
+		right   : 0;
+		bottom  : 0;
+		left    : 0;
+
+		-webkit-appearance: none;
+
+		width : 100%;
+		height: 4px;
+
+		background: $color-blue;
+	}
+}

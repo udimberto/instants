@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/scss" href="scss/app.scss" />
+	</head>
+
+	<body class="app flex flex--column">
+		<main id="root" class="app__content flex__item flex__item--start"></main>
+	</body>
+
+	<script type="text/jsx">
+		import React from 'react';
+		import ReactDOM from 'react-dom';
+		import { AppContainer } from 'react-hot-loader';
+
+		const render = () => {
+			const App = require('./components/App').default;
+
+			ReactDOM.render(
+				<AppContainer><App /></AppContainer>,
+				document.getElementById('root')
+			);
+		}
+
+		render();
+
+		if (module.hot) {
+			module.hot.accept(render);
+		}
+	</script>
+</html>

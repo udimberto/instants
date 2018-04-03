@@ -1,0 +1,48 @@
+
+// bases
+$color-white      : #ffffff;
+$color-white-smoke: #F8F8F8;
+
+$color-light-grey : #D4D7D9;
+$color-grey       : #9DA6AD;
+$color-dark-grey  : #7A8085;
+
+$color-black-grey : #2D2D2D;
+$color-black      : #000000;
+
+
+// colors
+$color-blue       : #00A5DB;
+$color-green      : #60C659;
+$color-purple     : #A35FB1;
+$color-red        : #F13335;
+$color-orange-red : #F8561F;
+$color-orange     : #FCA311;
+$color-orange-2   : #FEA400;
+$color-orange-1   : #FF8D50;
+$color-yellow     : #FFC61E;
+
+
+// socials
+$color-facebook   : #3B5998;
+$color-twitter    : #6EC7E3;
+
+
+// defaults
+$color-inverse    : $color-white;
+$color-primary    : $color-orange;
+$color-secondary  : $color-blue;
+$color-success    : $color-green;
+$color-warning    : $color-yellow;
+$color-error      : $color-red;
+$color-info       : $color-blue;
+
+$color-defaults   : (
+	inverse  : $color-inverse,
+	primary  : $color-primary,
+	secondary: $color-secondary,
+	success  : $color-success,
+	warning  : $color-warning,
+	error    : $color-error,
+	info     : $color-info,
+);

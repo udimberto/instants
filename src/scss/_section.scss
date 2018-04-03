@@ -1,0 +1,12 @@
+/* Section Styles
+-------------------------------------------------------------------------- */
+$section: ".section";
+
+#{$section} {
+	padding: 40px 0;
+
+	+ #{$section} {
+		padding-top: 39px;
+		border-top : 1px solid $color-black-grey;
+	}
+}
